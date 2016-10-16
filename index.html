@@ -22,10 +22,7 @@
 <body ng-app="chatApp" ng-controller="chatController">
 	<div class="row">
 		<h1>Amazing tchat app !</h1>
-		<div class="w-2">
-			&nbsp
-		</div>
-		<div class="w-5">
+		<div class="w-6">
 			<h2>Conversation</h2>
 			<div class="message" ng-repeat="message in DB">
 			<!-- <a class="close-button" href="#" ng-click="delete(message)"></a> -->
@@ -33,7 +30,7 @@
 			<p class="msg">{{message.msg}}</p>
 			</div>
 		</div>
-		<div class="w-5">
+		<div class="w-6">
 			<h2>Send a message</h2>
 			<input type="text" name="name" ng-model="name" placeholder="Nickname">
 			<textarea ng-model="msg" placeholder="Write a message.." rows="8" cols="40"></textarea>

@@ -5,14 +5,17 @@ angular.module('chatApp',["firebase" ])
   var ref = new Firebase("https://vivid-inferno-5873.firebaseio.com/demcrud");
   var sync = $firebase(ref);
 
-  var name = ['Batman', 'Superman', 'Spiderman', 'Captain America', 'Hulk', 'Thor']
+  var name = ['Batman', 'Superman', 'Spider-man', 'Captain America', 'Hulk', 'Thor', 'Joker', 'Iron Man', 'Wolverine', 'Flash', 'Deadpool']
 
   $scope.DB = sync.$asArray();
 
   $scope.name= name[Math.floor(Math.random()*name.length)];
 
   $scope.add=function(){
-    $scope.DB.$add({name: $scope.name, msg: $scope.msg});
+    if ($scope.name && $scope.msg) {
+      $scope.DB.$add({name: $scope.name, msg: $scope.msg});
+      $scope.msg='';
+    }
   }
 
   $scope.edit=function(message){
