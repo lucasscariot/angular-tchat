@@ -55,6 +55,7 @@ input[type="submit"] {
 }
 
 .delete-btn {
+  text-align: right;
   color: #a95a5a;
   font: 14px/100% arial, sans-serif;
   text-decoration: none;
