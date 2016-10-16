@@ -1,0 +1,74 @@
+/* Votre Style */
+html, body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Source Sans Pro";
+  background-color: #f1ede9;
+  color: #696969;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #f60;
+}
+
+h1 {
+  text-align: center;
+}
+
+input[type=text], textarea {
+  color: #666666;
+  border: 1px solid #e2e2e2;
+  width: 95%;
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin: 5px;
+  font-size: 15px;
+}
+
+input[type="submit"] {
+  border: 1px solid #e2e2e2;
+  background: #6fc0a5;
+  color: white;
+  width: 100%;
+  margin: 5px;
+  padding: 8px;
+  font-size: 20px;
+}
+
+.message {
+  color: white;
+  margin-top: 1px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #6f88c0;
+}
+
+.name {
+  margin-left: 5%;
+  width: 25%;
+  float: left;
+}
+
+.msg {
+  width: 70%;
+  float: left;
+}
+
+.talktext{
+  padding-left: 10px;
+	text-align: left;
+  line-height: 1.5em;
+}
+
+.close-button {
+  color: #777;
+  font: 14px/100% arial, sans-serif;
+  position: absolute;
+  right: 5px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  top: 5px;
+  content: 'X';
+}
