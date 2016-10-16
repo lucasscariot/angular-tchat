@@ -49,8 +49,15 @@ input[type="submit"] {
 }
 
 .delete-btn {
-  color: #F44336;
+  color: #a95a5a;
   font: 14px/100% arial, sans-serif;
   text-decoration: none;
   top: 5px;
+}
+
+.delete-btn:hover {
+  font: 16px/100% arial, sans-serif;
+  text-decoration: none;
+  transition: 1s;
+  color: #F44336;
 }

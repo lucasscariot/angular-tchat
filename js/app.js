@@ -14,7 +14,7 @@ angular.module('chatApp',["firebase" ])
 
   $scope.add=function(){
     if ($scope.name && $scope.msg) {
-      $scope.DB.$add({name: $scope.name, msg: $scope.msg});
+      $scope.messages.$add({name: $scope.name, msg: $scope.msg});
       $scope.msg='';
     }
   }
@@ -22,7 +22,7 @@ angular.module('chatApp',["firebase" ])
   $scope.edit=function(message){
     $scope.app=message
   }
-  $scope.delete=function(item){
-    $scope.DB.$remove(item)
+  $scope.delete=function(message){
+    $scope.messages.$remove(message)
   }
 })
