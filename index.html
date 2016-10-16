@@ -19,7 +19,7 @@
 			<h1>{{title}}</h1>
 			<div class="col-sm-12 col-md-6">
 				<h2>Conversation</h2>
-				<div class="message col-xs-12" ng-repeat="message in messages">
+				<div class="message col-xs-12" ng-repeat="message in messages" ng-class="{sender: message.name == name}">
 					<p class="col-xs-5"><strong>{{message.name}} :</strong></p>
 					<p class="col-xs-5">{{message.msg}}</p>
 					<a class="col-xs-2 delete-btn" href="#" ng-click="delete(message)" ng-show="message.name == name">X</a>

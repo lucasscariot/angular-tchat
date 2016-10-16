@@ -30,7 +30,7 @@ input[type=text], textarea {
 
 input[type="submit"] {
   border: 1px solid #e2e2e2;
-  background: #6fc0a5;
+  background: #78c06f;
   color: white;
   width: 100%;
   margin: 5px;
@@ -46,6 +46,12 @@ input[type="submit"] {
   width: 100%;
   height: auto;
   background-color: #6f88c0;
+  transition: 0.4s;
+}
+
+.sender {
+  background-color: #6fc0b1;
+  transition: 0.4s;
 }
 
 .delete-btn {
