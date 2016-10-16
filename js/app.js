@@ -7,10 +7,10 @@ angular.module('chatApp',["firebase" ])
 
   var name = ['Batman', 'Superman', 'Spider-man', 'Captain America', 'Hulk', 'Thor', 'Joker', 'Iron Man', 'Wolverine', 'Flash', 'Deadpool']
 
-  $scope.DB = sync.$asArray();
-
   $scope.title = "Amazing tchat app !";
   $scope.name= name[Math.floor(Math.random()*name.length)];
+
+  $scope.messages = sync.$asArray();
 
   $scope.add=function(){
     if ($scope.name && $scope.msg) {
