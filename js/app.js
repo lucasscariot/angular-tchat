@@ -9,6 +9,7 @@ angular.module('chatApp',["firebase" ])
 
   $scope.DB = sync.$asArray();
 
+  $scope.title = "Amazing tchat app !";
   $scope.name= name[Math.floor(Math.random()*name.length)];
 
   $scope.add=function(){

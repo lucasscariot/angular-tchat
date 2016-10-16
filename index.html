@@ -3,40 +3,35 @@
 <html>
 <head>
 
- <!--Angulare -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular.min.js"></script>
-<!-- Firebase -->
-<script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
-<!-- AngularFire -->
-<script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
-
-<!--Applicazione -->
-<script src="js/app.js"></script>
-
-<title>Luc{c}a{s} Tchat</title>
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-<link rel="stylesheet" href="css/grid.css">
-<link rel="stylesheet" href="css/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
+	<script src="js/app.js"></script>
+	<title>Luc{c}a{s} Tchat</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
 
 </head>
 <body ng-app="chatApp" ng-controller="chatController">
-	<div class="row">
-		<h1>Amazing tchat app !</h1>
-		<div class="w-6">
-			<h2>Conversation</h2>
-			<div class="message" ng-repeat="message in DB">
-			<a class="close-button" href="#" ng-click="delete(message)" ng-show="message.name == name">X</a>
-			<p class="name"><strong>{{message.name}} :</strong></p>
-			<p class="msg">{{message.msg}}</p>
+	<div class="container">
+		<div class="row">
+			<h1>{{title}}</h1>
+			<div class="col-sm-6">
+				<h2>Conversation</h2>
+				<div class="message col-xs-12" ng-repeat="message in DB">
+					<p class="col-xs-5"><strong>{{message.name}} :</strong></p>
+					<p class="col-xs-5">{{message.msg}}</p>
+					<a class="col-xs-2 delete-btn" href="#" ng-click="delete(message)" ng-show="message.name == name">X</a>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<h2>Send a message</h2>
+				<input class="col-xs-12" type="text" name="name" ng-model="name" placeholder="Nickname">
+				<textarea class="col-xs-12"  ng-model="msg" placeholder="Write a message.." rows="8" cols="40"></textarea>
+				<input class="col-xs-12"  type="submit" ng-click="add()" value="Send !">
 			</div>
 		</div>
-		<div class="w-6">
-			<h2>Send a message</h2>
-			<input type="text" name="name" ng-model="name" placeholder="Nickname">
-			<textarea ng-model="msg" placeholder="Write a message.." rows="8" cols="40"></textarea>
-			<input type="submit" ng-click="add()" value="Send !">
-		</div>
 	</div>
-
 </body>
 </html>
