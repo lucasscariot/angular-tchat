@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/styles.css">
-
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
 </head>
 <body ng-app="chatApp" ng-controller="chatController">
 	<div class="container">
@@ -28,7 +28,7 @@
 			<div class="col-sm-12 col-md-6">
 				<h2>Send a message</h2>
 				<input class="col-xs-12" type="text" name="name" ng-model="name" placeholder="Nickname">
-				<textarea class="col-xs-12"  ng-model="msg" placeholder="Write a message.." rows="8" cols="40"></textarea>
+				<textarea class="col-xs-12"  ng-model="msg" placeholder="Write a message.." rows="7"></textarea>
 				<input class="col-xs-12"  type="submit" ng-click="add()" value="Send !">
 			</div>
 		</div>
