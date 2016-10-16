@@ -33,6 +33,7 @@ input[type="submit"] {
   margin: 5px;
   padding: 8px;
   font-size: 20px;
+  border-radius: 0px;
 }
 
 .message {
