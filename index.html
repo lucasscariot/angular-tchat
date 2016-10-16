@@ -25,7 +25,7 @@
 		<div class="w-6">
 			<h2>Conversation</h2>
 			<div class="message" ng-repeat="message in DB">
-			<!-- <a class="close-button" href="#" ng-click="delete(message)"></a> -->
+			<a class="close-button" href="#" ng-click="delete(message)" ng-show="message.name == name">X</a>
 			<p class="name"><strong>{{message.name}} :</strong></p>
 			<p class="msg">{{message.msg}}</p>
 			</div>
