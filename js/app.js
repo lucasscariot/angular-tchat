@@ -2,7 +2,7 @@ angular.module('chatApp',["firebase" ])
 .controller('chatController',function($scope,$firebase){
 
 
-  var ref = new Firebase("https://vivid-inferno-5873.firebaseio.com/demcrud");
+  var ref = new Firebase("https://myamazingtchat.firebaseio.com");
   var sync = $firebase(ref);
 
   var name = ['Batman', 'Superman', 'Spider-man', 'Captain America', 'Hulk', 'Thor', 'Joker', 'Iron Man', 'Wolverine', 'Flash', 'Deadpool']
