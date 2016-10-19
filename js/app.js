@@ -1,7 +1,6 @@
 angular.module('chatApp',["firebase" ])
 .controller('chatController',function($scope,$firebase){
 
-
   var ref = new Firebase("https://myamazingtchat.firebaseio.com");
   var sync = $firebase(ref);
 
@@ -17,10 +16,6 @@ angular.module('chatApp',["firebase" ])
       $scope.messages.$add({name: $scope.name, msg: $scope.msg});
       $scope.msg='';
     }
-  }
-
-  $scope.edit=function(message){
-    $scope.app=message
   }
   $scope.delete=function(message){
     $scope.messages.$remove(message)
