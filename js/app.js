@@ -1,4 +1,4 @@
-angular.module('chatApp',["firebase" ])
+angular.module('chatApp',['firebase'])
 .controller('chatController',function($scope,$firebase){
 
   var ref = new Firebase("https://myamazingtchat.firebaseio.com");
